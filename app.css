@@ -1,0 +1,614 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  color: #111827;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 75px;
+  padding: 0 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 5px 22px rgba(15, 23, 42, 0.08);
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+  color: #4f46e5;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #111827;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: #4f46e5;
+}
+
+.user-email {
+  font-weight: 600;
+  color: #374151;
+}
+
+.logout-btn {
+  padding: 11px 24px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* HOME */
+
+.hero {
+  height: calc(100vh - 75px);
+  display: flex;
+  align-items: center;
+  padding: 0 85px;
+  background:
+    linear-gradient(90deg, rgba(15, 23, 42, 0.9), rgba(79, 70, 229, 0.55)),
+    url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=90");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+.hero h1 {
+  font-size: 68px;
+  color: white;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.hero h3 {
+  color: white;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #e5e7eb;
+  font-size: 19px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 30px;
+  border-radius: 13px;
+  font-weight: 800;
+}
+
+.primary-btn {
+  background: #4f46e5;
+  color: white;
+}
+
+.secondary-btn {
+  background: white;
+  color: #4f46e5;
+}
+
+/* CAREER CARDS */
+
+.card-container {
+  padding: 70px 85px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card-content h2 {
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* LOGIN + REGISTER */
+
+.login-page,
+.register-page {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(79, 70, 229, 0.18), transparent 35%),
+    linear-gradient(135deg, #eef2ff, #f8fafc);
+  padding: 40px;
+}
+
+.login-card,
+.register-card {
+  width: 430px;
+  background: white;
+  padding: 42px;
+  border-radius: 24px;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.15);
+}
+
+.login-card h2,
+.register-card h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.login-card p,
+.register-card p {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 26px;
+  line-height: 1.6;
+}
+
+.login-card input,
+.register-card input {
+  width: 100%;
+  display: block;
+  padding: 14px 15px;
+  margin-bottom: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 13px;
+  font-size: 15px;
+  outline: none;
+  background: #f8fafc;
+}
+
+.login-card input:focus,
+.register-card input:focus {
+  border-color: #4f46e5;
+  background: white;
+}
+
+.login-card button,
+.register-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.login-card h4,
+.register-card h4 {
+  text-align: center;
+  margin-top: 20px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.login-card a,
+.register-card a {
+  color: #4f46e5;
+  font-weight: 800;
+}
+
+/* DASHBOARD */
+
+.dashboard-page {
+  padding: 50px 85px;
+  min-height: calc(100vh - 75px);
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+.dashboard-banner {
+  background: linear-gradient(135deg, #111827, #4f46e5, #7c3aed);
+  color: white;
+  padding: 38px;
+  border-radius: 26px;
+  margin-bottom: 30px;
+  box-shadow: 0 18px 45px rgba(79, 70, 229, 0.3);
+}
+
+.dashboard-banner h1 {
+  font-size: 42px;
+}
+
+.dashboard-email,
+.welcome-text {
+  color: #e0e7ff;
+}
+
+.dashboard-badge {
+  margin-top: 15px;
+  display: inline-block;
+  background: white;
+  color: #4f46e5;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 800;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: white;
+  padding: 26px;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.09);
+  text-align: center;
+}
+
+.stat-card span {
+  font-size: 32px;
+}
+
+.stat-card h2 {
+  color: #4f46e5;
+  font-size: 34px;
+  margin-top: 8px;
+}
+
+.stat-card p {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.roadmap-section {
+  background: white;
+  padding: 35px;
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.09);
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.roadmap-card {
+  background: #f8fafc;
+  padding: 24px;
+  border-radius: 18px;
+}
+
+.roadmap-card h3 {
+  color: #4f46e5;
+  margin-bottom: 10px;
+}
+
+/* JOBS */
+
+.jobs-section {
+  padding: 65px 85px;
+}
+
+.jobs-section h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 38px;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 26px;
+}
+
+.job-card {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.1);
+}
+
+.job-card h3 {
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.job-card p {
+  color: #6b7280;
+  margin-bottom: 7px;
+}
+
+.apply-btn {
+  margin-top: 18px;
+  width: 100%;
+  padding: 13px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-box {
+  width: 380px;
+  background: white;
+  padding: 32px;
+  border-radius: 22px;
+}
+
+.modal-box h2 {
+  margin-bottom: 20px;
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 14px;
+  border-radius: 11px;
+  border: 1px solid #d1d5db;
+}
+
+.modal-box button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 8px;
+  border-radius: 11px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  font-weight: 700;
+}
+
+.cancel {
+  background: #ef4444 !important;
+}
+
+/* APPLIED JOBS PAGE */
+
+.applied-page {
+  min-height: calc(100vh - 75px);
+  padding: 55px 85px;
+  background:
+    radial-gradient(circle at top left, rgba(79, 70, 229, 0.12), transparent 35%),
+    linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+.applied-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.applied-header h1 {
+  font-size: 42px;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.applied-header p {
+  font-size: 17px;
+  color: #64748b;
+}
+
+.clear-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  padding: 13px 24px;
+  border-radius: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.25);
+}
+
+.clear-btn:hover {
+  transform: translateY(-2px);
+}
+
+.table-card {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.12);
+  border: 1px solid #e5e7eb;
+  overflow-x: auto;
+}
+
+.table-card table {
+  width: 100%;
+  min-width: 1050px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-card thead {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+.table-card th {
+  padding: 18px 16px;
+  color: white;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.table-card th:first-child {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.table-card th:last-child {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.table-card td {
+  padding: 18px 16px;
+  color: #334155;
+  font-size: 15px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.table-card tbody tr {
+  transition: 0.25s ease;
+}
+
+.table-card tbody tr:hover {
+  background: #f8fafc;
+}
+
+.status-badge {
+  display: inline-block;
+  background: #dcfce7;
+  color: #166534;
+  padding: 7px 15px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.empty-box {
+  max-width: 500px;
+  margin: 80px auto;
+  background: white;
+  text-align: center;
+  padding: 50px 35px;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+.empty-box h2 {
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.empty-box p {
+  color: #64748b;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .navbar {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 40px 25px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .card-container,
+  .jobs-section,
+  .dashboard-page,
+  .applied-page {
+    padding: 30px 22px;
+  }
+
+  .stats-grid,
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .login-card,
+  .register-card {
+    width: 100%;
+  }
+
+  .applied-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .applied-header h1 {
+    font-size: 32px;
+  }
+
+  .table-card {
+    padding: 16px;
+  }
+}
